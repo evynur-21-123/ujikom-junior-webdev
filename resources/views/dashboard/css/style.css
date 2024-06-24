@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.dashboard {
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.menu-item {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+#employeeMenu, #ownerMenu {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+#ownerMenu {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
